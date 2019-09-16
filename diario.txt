@@ -1,0 +1,11 @@
+2019/09/16
+
+Hemos creado usuario en GITHUB (amrsin)
+Creado repositorio: asingh con READ.md y gitignore (plantilla de java)
+
+git clone https://github.com/amrsin/asingh.git copiamos el repositoria al /home (en local)
+
+
+
+
+
