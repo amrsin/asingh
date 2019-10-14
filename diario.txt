@@ -5,7 +5,17 @@ Creado repositorio: asingh con READ.md y gitignore (plantilla de java)
 
 git clone https://github.com/amrsin/asingh.git copiamos el repositoria al /home (en local)
 
+2019/09/19
 
+git config --global user.name amrsin 
+git config --global user.email amrsin@alu.iesserpis.org
+git config --global push.default simple
+
+git add diario.txt
+git commit -m "diario.txt con introducción a github y git"
+git log
+git status
+git push
 
 
 
