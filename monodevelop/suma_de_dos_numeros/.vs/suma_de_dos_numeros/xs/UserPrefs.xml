@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{9DAE15CA-AD5D-464A-8686-846C17923CA3}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="suma_de_dos_numeros/Program.cs">
+    <Files>
+      <File FileName="suma_de_dos_numeros/Program.cs" Line="11" Column="6" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="suma_de_dos_numeros" expanded="True">
+            <Node name="suma_de_dos_numeros" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.suma__de__dos__numeros FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

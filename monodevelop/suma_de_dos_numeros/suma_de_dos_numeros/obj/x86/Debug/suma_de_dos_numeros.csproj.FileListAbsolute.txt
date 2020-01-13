@@ -1,0 +1,6 @@
+/home/amrsin/asingh/monodevelop/suma_de_dos_numeros/suma_de_dos_numeros/bin/Debug/suma_de_dos_numeros.exe
+/home/amrsin/asingh/monodevelop/suma_de_dos_numeros/suma_de_dos_numeros/bin/Debug/suma_de_dos_numeros.pdb
+/home/amrsin/asingh/monodevelop/suma_de_dos_numeros/suma_de_dos_numeros/obj/x86/Debug/suma_de_dos_numeros.csprojAssemblyReference.cache
+/home/amrsin/asingh/monodevelop/suma_de_dos_numeros/suma_de_dos_numeros/obj/x86/Debug/suma_de_dos_numeros.csproj.CoreCompileInputs.cache
+/home/amrsin/asingh/monodevelop/suma_de_dos_numeros/suma_de_dos_numeros/obj/x86/Debug/suma_de_dos_numeros.exe
+/home/amrsin/asingh/monodevelop/suma_de_dos_numeros/suma_de_dos_numeros/obj/x86/Debug/suma_de_dos_numeros.pdb
