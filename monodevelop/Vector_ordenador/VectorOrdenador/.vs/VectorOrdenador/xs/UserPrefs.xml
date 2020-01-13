@@ -1,13 +1,14 @@
-﻿<Properties StartupConfiguration="{E31189D7-B4E1-4262-A008-9BB9408713C4}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="holamundo/Program.cs">
+﻿<Properties StartupConfiguration="{03F53522-9C4A-41DF-A920-7FAFE3C58627}|Default">
+  <MonoDevelop.Ide.ItemProperties.VectorOrdenador FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="VectorOrdenador/Program.cs">
     <Files>
-      <File FileName="holamundo/Program.cs" Line="12" Column="13" />
+      <File FileName="VectorOrdenador/Program.cs" Line="9" Column="22" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="holamundo" expanded="True">
-            <Node name="holamundo" expanded="True">
+          <Node name="VectorOrdenador" expanded="True">
+            <Node name="VectorOrdenador" expanded="True">
               <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
@@ -16,7 +17,6 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.holamundo PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

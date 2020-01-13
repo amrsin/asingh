@@ -1,0 +1,6 @@
+/home/amrsin/asingh/monodevelop/Vector_ordenador/VectorOrdenador/VectorOrdenador/obj/x86/Debug/VectorOrdenador.csprojAssemblyReference.cache
+/home/amrsin/asingh/monodevelop/Vector_ordenador/VectorOrdenador/VectorOrdenador/obj/x86/Debug/VectorOrdenador.csproj.CoreCompileInputs.cache
+/home/amrsin/asingh/monodevelop/Vector_ordenador/VectorOrdenador/VectorOrdenador/bin/Debug/VectorOrdenador.exe
+/home/amrsin/asingh/monodevelop/Vector_ordenador/VectorOrdenador/VectorOrdenador/bin/Debug/VectorOrdenador.pdb
+/home/amrsin/asingh/monodevelop/Vector_ordenador/VectorOrdenador/VectorOrdenador/obj/x86/Debug/VectorOrdenador.exe
+/home/amrsin/asingh/monodevelop/Vector_ordenador/VectorOrdenador/VectorOrdenador/obj/x86/Debug/VectorOrdenador.pdb
