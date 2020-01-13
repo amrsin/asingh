@@ -1,0 +1,6 @@
+/home/amrsin/asingh/monodevelop/holamundo/holamundo/bin/Debug/holamundo.exe
+/home/amrsin/asingh/monodevelop/holamundo/holamundo/bin/Debug/holamundo.pdb
+/home/amrsin/asingh/monodevelop/holamundo/holamundo/obj/x86/Debug/holamundo.csprojAssemblyReference.cache
+/home/amrsin/asingh/monodevelop/holamundo/holamundo/obj/x86/Debug/holamundo.csproj.CoreCompileInputs.cache
+/home/amrsin/asingh/monodevelop/holamundo/holamundo/obj/x86/Debug/holamundo.exe
+/home/amrsin/asingh/monodevelop/holamundo/holamundo/obj/x86/Debug/holamundo.pdb
