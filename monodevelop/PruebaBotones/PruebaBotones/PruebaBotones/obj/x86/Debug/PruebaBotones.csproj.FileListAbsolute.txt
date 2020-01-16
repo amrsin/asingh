@@ -1,0 +1,6 @@
+/home/amrsin/asingh/monodevelop/PruebaBotones/PruebaBotones/PruebaBotones/bin/Debug/PruebaBotones.exe
+/home/amrsin/asingh/monodevelop/PruebaBotones/PruebaBotones/PruebaBotones/bin/Debug/PruebaBotones.pdb
+/home/amrsin/asingh/monodevelop/PruebaBotones/PruebaBotones/PruebaBotones/obj/x86/Debug/PruebaBotones.csprojAssemblyReference.cache
+/home/amrsin/asingh/monodevelop/PruebaBotones/PruebaBotones/PruebaBotones/obj/x86/Debug/PruebaBotones.csproj.CoreCompileInputs.cache
+/home/amrsin/asingh/monodevelop/PruebaBotones/PruebaBotones/PruebaBotones/obj/x86/Debug/PruebaBotones.exe
+/home/amrsin/asingh/monodevelop/PruebaBotones/PruebaBotones/PruebaBotones/obj/x86/Debug/PruebaBotones.pdb
