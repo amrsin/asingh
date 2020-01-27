@@ -1,0 +1,6 @@
+/home/amrsin/asingh/monodevelop/tabla/tabla/bin/Debug/tabla.exe
+/home/amrsin/asingh/monodevelop/tabla/tabla/bin/Debug/tabla.pdb
+/home/amrsin/asingh/monodevelop/tabla/tabla/obj/x86/Debug/tabla.csprojAssemblyReference.cache
+/home/amrsin/asingh/monodevelop/tabla/tabla/obj/x86/Debug/tabla.csproj.CoreCompileInputs.cache
+/home/amrsin/asingh/monodevelop/tabla/tabla/obj/x86/Debug/tabla.exe
+/home/amrsin/asingh/monodevelop/tabla/tabla/obj/x86/Debug/tabla.pdb
