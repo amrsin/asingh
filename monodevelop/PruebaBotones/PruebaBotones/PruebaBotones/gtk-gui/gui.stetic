@@ -33,7 +33,7 @@
             <property name="MemberName" />
             <property name="Spacing">6</property>
             <child>
-              <widget class="Gtk.Entry" id="entry3">
+              <widget class="Gtk.Entry" id="text">
                 <property name="MemberName" />
                 <property name="CanFocus">True</property>
                 <property name="IsEditable">True</property>
@@ -77,7 +77,7 @@
               <widget class="Gtk.Entry" id="entry5">
                 <property name="MemberName" />
                 <property name="CanFocus">True</property>
-                <property name="IsEditable">True</property>
+                <property name="IsEditable">False</property>
                 <property name="InvisibleChar">•</property>
               </widget>
               <packing>
@@ -86,12 +86,13 @@
               </packing>
             </child>
             <child>
-              <widget class="Gtk.Button" id="button7">
+              <widget class="Gtk.Button" id="aleatorio">
                 <property name="MemberName" />
                 <property name="CanFocus">True</property>
                 <property name="Type">TextOnly</property>
-                <property name="Label" translatable="yes">GtkButton</property>
+                <property name="Label" translatable="yes">Aleatorio</property>
                 <property name="UseUnderline">True</property>
+                <signal name="Clicked" handler="OnAleatorioClicked" />
               </widget>
               <packing>
                 <property name="Position">1</property>
@@ -101,12 +102,13 @@
               </packing>
             </child>
             <child>
-              <widget class="Gtk.Button" id="button8">
+              <widget class="Gtk.Button" id="salir">
                 <property name="MemberName" />
                 <property name="CanFocus">True</property>
                 <property name="Type">TextOnly</property>
-                <property name="Label" translatable="yes">GtkButton</property>
+                <property name="Label" translatable="yes">SALIR</property>
                 <property name="UseUnderline">True</property>
+                <signal name="Clicked" handler="OnSalirClicked" />
               </widget>
               <packing>
                 <property name="Position">2</property>

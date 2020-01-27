@@ -1,15 +1,15 @@
 ﻿<Properties StartupConfiguration="{03F53522-9C4A-41DF-A920-7FAFE3C58627}|Default">
-  <MonoDevelop.Ide.ItemProperties.VectorOrdenador FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.VectorOrdenador PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="VectorOrdenador/Program.cs">
     <Files>
-      <File FileName="VectorOrdenador/Program.cs" Line="9" Column="22" />
+      <File FileName="VectorOrdenador/Program.cs" Line="34" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="VectorOrdenador" expanded="True">
             <Node name="VectorOrdenador" expanded="True">
-              <Node name="Program.cs" selected="True" />
+              <Node name="Properties" selected="True" />
             </Node>
           </Node>
         </State>
