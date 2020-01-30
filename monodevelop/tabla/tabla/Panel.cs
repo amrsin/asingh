@@ -25,9 +25,6 @@ namespace tabla
     }
             vbox1.Add(table);
             table.ShowAll();
-
         }
-
-
     }
   }
