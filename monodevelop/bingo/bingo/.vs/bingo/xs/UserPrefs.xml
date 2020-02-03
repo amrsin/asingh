@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{04CBFE62-78D1-4EF3-8DC2-CEA38154C8E8}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="bingo/MainWindow.cs">
+    <Files>
+      <File FileName="bingo/Program.cs" Line="1" Column="1" />
+      <File FileName="bingo/panel.cs" Line="28" Column="13" />
+      <File FileName="bingo/Bombo.cs" Line="29" Column="2" />
+      <File FileName="bingo/MainWindow.cs" Line="13" Column="6" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="bingo" expanded="True">
+            <Node name="bingo" expanded="True">
+              <Node name="MainWindow.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.bingo PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
