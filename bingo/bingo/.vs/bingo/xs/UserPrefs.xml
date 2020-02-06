@@ -1,17 +1,17 @@
 ﻿<Properties StartupConfiguration="{04CBFE62-78D1-4EF3-8DC2-CEA38154C8E8}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="bingo/Bombo.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../panel.cs">
     <Files>
-      <File FileName="bingo/Program.cs" Line="1" Column="1" />
-      <File FileName="bingo/MainWindow.cs" Line="9" Column="17" />
-      <File FileName="bingo/panel.cs" Line="1" Column="1" />
+      <File FileName="bingo/Program.cs" Line="15" Column="2" />
+      <File FileName="../../panel.cs" Line="27" Column="29" />
       <File FileName="bingo/Bombo.cs" Line="29" Column="2" />
+      <File FileName="bingo/MainWindow.cs" Line="10" Column="40" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="bingo" expanded="True">
             <Node name="bingo" expanded="True">
-              <Node name="Bombo.cs" selected="True" />
+              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>
