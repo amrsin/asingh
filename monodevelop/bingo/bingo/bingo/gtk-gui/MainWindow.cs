@@ -58,5 +58,6 @@ public partial class MainWindow
 		this.DefaultWidth = 400;
 		this.DefaultHeight = 300;
 		this.Show();
+		this.button1.Clicked += new global::System.EventHandler(this.OnButton1Clicked);
 	}
 }

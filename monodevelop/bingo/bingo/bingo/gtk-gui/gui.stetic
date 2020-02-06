@@ -36,6 +36,7 @@
                 <property name="Type">TextOnly</property>
                 <property name="Label" translatable="yes">JUGAR</property>
                 <property name="UseUnderline">True</property>
+                <signal name="Clicked" handler="OnButton1Clicked" />
               </widget>
               <packing>
                 <property name="Position">1</property>

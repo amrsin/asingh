@@ -1,13 +1,20 @@
 ﻿using System;
 using Gtk;
-using tabla;
+using bingo;
 
 public partial class MainWindow : Gtk.Window
 {
+    Panel panel;
+    Bombo bombo = new Bombo();
+
     public MainWindow() : base(Gtk.WindowType.Toplevel)
     {
         Build();
-        Panel panel = new Panel(vbox1);
+        panel = new Panel(vbox1);
+        /*button1.Clicked += delegate
+        {
+            int numero = bombo.sacarBola();
+        };*/
 
 
     }
@@ -17,5 +24,11 @@ public partial class MainWindow : Gtk.Window
     {
         Application.Quit();
         a.RetVal = true;
-    } 
+    }
+
+    protected void OnButton1Clicked(object sender, EventArgs e)
+    {
+        int numero = bombo.sacarBola();
+        panel.Marcar(numero);
+    }
 }

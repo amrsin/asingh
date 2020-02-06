@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Gtk;
 
 namespace bingo
+
 {
 
     public class Bombo
@@ -18,12 +19,12 @@ namespace bingo
         }
 
 
-        /*public int sacarBolar()
+        public int sacarBola()
         {
-            int indexAletorio = random.Next(bolas.Count);
-            int bola = bolas(indexAletorio);
-            bolas.Remove(indexAletorio);
+            int indexAletorio = random.Next(1,90);
+            int bola = bolas[indexAletorio];
+            bolas.RemoveAt(indexAletorio);
             return bola;
-        }*/
+        }
     }
 }

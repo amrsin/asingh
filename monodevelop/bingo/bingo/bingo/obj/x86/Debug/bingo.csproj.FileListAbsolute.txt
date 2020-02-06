@@ -4,3 +4,9 @@
 /home/amrsin/asingh/bingo/bingo/bingo/bin/Debug/bingo.pdb
 /home/amrsin/asingh/bingo/bingo/bingo/obj/x86/Debug/bingo.exe
 /home/amrsin/asingh/bingo/bingo/bingo/obj/x86/Debug/bingo.pdb
+/home/amrsin/asingh/monodevelop/bingo/bingo/bingo/bin/Debug/bingo.exe
+/home/amrsin/asingh/monodevelop/bingo/bingo/bingo/obj/x86/Debug/bingo.csprojAssemblyReference.cache
+/home/amrsin/asingh/monodevelop/bingo/bingo/bingo/obj/x86/Debug/bingo.csproj.CoreCompileInputs.cache
+/home/amrsin/asingh/monodevelop/bingo/bingo/bingo/bin/Debug/bingo.pdb
+/home/amrsin/asingh/monodevelop/bingo/bingo/bingo/obj/x86/Debug/bingo.exe
+/home/amrsin/asingh/monodevelop/bingo/bingo/bingo/obj/x86/Debug/bingo.pdb
