@@ -18,10 +18,9 @@ namespace bingo
                 bolas.Add(bola);
         }
 
-
         public int sacarBola()
         {
-            int indexAletorio = random.Next(1,90);
+            int indexAletorio = random.Next(bolas.Count);
             int bola = bolas[indexAletorio];
             bolas.RemoveAt(indexAletorio);
             return bola;
