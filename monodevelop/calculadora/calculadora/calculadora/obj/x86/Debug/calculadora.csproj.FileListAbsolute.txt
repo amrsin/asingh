@@ -1,0 +1,12 @@
+/home/amrsin/asingh/calculadora/calculadora/calculadora/bin/Debug/calculadora.exe
+/home/amrsin/asingh/calculadora/calculadora/calculadora/bin/Debug/calculadora.pdb
+/home/amrsin/asingh/calculadora/calculadora/calculadora/obj/x86/Debug/calculadora.csprojAssemblyReference.cache
+/home/amrsin/asingh/calculadora/calculadora/calculadora/obj/x86/Debug/calculadora.csproj.CoreCompileInputs.cache
+/home/amrsin/asingh/calculadora/calculadora/calculadora/obj/x86/Debug/calculadora.exe
+/home/amrsin/asingh/calculadora/calculadora/calculadora/obj/x86/Debug/calculadora.pdb
+/home/amrsin/asingh/monodevelop/calculadora/calculadora/calculadora/bin/Debug/calculadora.exe
+/home/amrsin/asingh/monodevelop/calculadora/calculadora/calculadora/bin/Debug/calculadora.pdb
+/home/amrsin/asingh/monodevelop/calculadora/calculadora/calculadora/obj/x86/Debug/calculadora.csprojAssemblyReference.cache
+/home/amrsin/asingh/monodevelop/calculadora/calculadora/calculadora/obj/x86/Debug/calculadora.csproj.CoreCompileInputs.cache
+/home/amrsin/asingh/monodevelop/calculadora/calculadora/calculadora/obj/x86/Debug/calculadora.exe
+/home/amrsin/asingh/monodevelop/calculadora/calculadora/calculadora/obj/x86/Debug/calculadora.pdb
