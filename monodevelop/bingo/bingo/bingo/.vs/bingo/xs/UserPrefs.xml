@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{04CBFE62-78D1-4EF3-8DC2-CEA38154C8E8}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="panel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MainWindow.cs">
     <Files>
-      <File FileName="panel.cs" Line="42" Column="2" />
+      <File FileName="panel.cs" Line="6" Column="1" />
       <File FileName="Bombo.cs" Line="28" Column="1" />
       <File FileName="Program.cs" Line="3" Column="16" />
       <File FileName="MainWindow.cs" Line="29" Column="23" />
@@ -10,9 +10,8 @@
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="bingo" expanded="True">
-            <Node name="bingo" expanded="True">
+            <Node name="bingo" expanded="True" selected="True">
               <Node name="Properties" expanded="True" />
-              <Node name="panel.cs" selected="True" />
             </Node>
           </Node>
         </State>

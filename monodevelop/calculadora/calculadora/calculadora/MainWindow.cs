@@ -38,7 +38,7 @@ public partial class MainWindow : Gtk.Window
         pantalla.DeleteText(pantalla.Text.Length - 1, pantalla.Text.Length);
         String display = pantalla.Text.ToString();
 
-        if (display.Contains(".")){
+        if (display.Contains(",")){
             cont_punto = 0;
         }
     
@@ -48,8 +48,8 @@ public partial class MainWindow : Gtk.Window
     {
         if (cont_igual==1) { 
          pantalla.DeleteText(0, pantalla.Text.Length);
-            cont_punto = 0;
         }
+        cont_punto = 0;
         cont_igual = 0;
         String display = pantalla.Text.ToString();
         pantalla.DeleteText(0, pantalla.Text.Length);
@@ -63,8 +63,8 @@ public partial class MainWindow : Gtk.Window
 
         {
             pantalla.DeleteText(0, pantalla.Text.Length);
-            cont_punto = 0;
         }
+        cont_punto = 0;
         cont_igual = 0;
         String display = pantalla.Text.ToString();
         pantalla.DeleteText(0, pantalla.Text.Length);
@@ -77,8 +77,8 @@ public partial class MainWindow : Gtk.Window
         if (cont_igual == 1)
         {
           pantalla.DeleteText(0, pantalla.Text.Length);
-            cont_punto = 0;
         }
+        cont_punto = 0;
         cont_igual = 0;
         String display = pantalla.Text.ToString();
         pantalla.DeleteText(0, pantalla.Text.Length);
@@ -90,8 +90,6 @@ public partial class MainWindow : Gtk.Window
 
        
             a = Convert.ToDouble(pantalla.Text);
-            String display = pantalla.Text.ToString();
-            pantalla.InsertText(display + "+");
             pantalla.DeleteText(0, pantalla.Text.Length);
             signo = "/";
 
@@ -102,8 +100,8 @@ public partial class MainWindow : Gtk.Window
         if (cont_igual == 1)
         { 
          pantalla.DeleteText(0, pantalla.Text.Length);
-            cont_punto = 0;
         }
+        cont_punto = 0;
         cont_igual = 0;
         String display = pantalla.Text.ToString();
         pantalla.DeleteText(0, pantalla.Text.Length);
@@ -116,8 +114,8 @@ public partial class MainWindow : Gtk.Window
         if (cont_igual == 1)
         { 
          pantalla.DeleteText(0, pantalla.Text.Length);
-            cont_punto = 0;
         }
+        cont_punto = 0;
         cont_igual = 0;
         String display = pantalla.Text.ToString();
         pantalla.DeleteText(0, pantalla.Text.Length);
@@ -130,8 +128,8 @@ public partial class MainWindow : Gtk.Window
         if (cont_igual == 1)
         {
           pantalla.DeleteText(0, pantalla.Text.Length);
-            cont_punto = 0;
         }
+        cont_punto = 0;
         cont_igual = 0;
         String display = pantalla.Text.ToString();
         pantalla.DeleteText(0, pantalla.Text.Length);
@@ -144,7 +142,6 @@ public partial class MainWindow : Gtk.Window
         cont_punto = 0;
         a = Convert.ToDouble(pantalla.Text);
             String display = pantalla.Text.ToString();
-            pantalla.InsertText(display + "+");
             pantalla.DeleteText(0, pantalla.Text.Length);
             signo = "*";
     }
@@ -154,8 +151,8 @@ public partial class MainWindow : Gtk.Window
         if (cont_igual == 1)
         {
          pantalla.DeleteText(0, pantalla.Text.Length);
-            cont_punto = 0;
         }
+        cont_punto = 0;
         cont_igual = 0;
         String display = pantalla.Text.ToString();
         pantalla.DeleteText(0, pantalla.Text.Length);
@@ -168,8 +165,8 @@ public partial class MainWindow : Gtk.Window
         if (cont_igual == 1)
         {
           pantalla.DeleteText(0, pantalla.Text.Length);
-            cont_punto = 0;
         }
+        cont_punto = 0;
         cont_igual = 0;
         String display = pantalla.Text.ToString();
         pantalla.DeleteText(0, pantalla.Text.Length);
@@ -181,9 +178,10 @@ public partial class MainWindow : Gtk.Window
         if (cont_igual == 1)
         {
           pantalla.DeleteText(0, pantalla.Text.Length);
-            cont_punto = 0;
         }
+        cont_punto = 0;
         cont_igual = 0;
+
         String display = pantalla.Text.ToString();
         pantalla.DeleteText(0, pantalla.Text.Length);
         pantalla.InsertText(display + "3");
@@ -193,8 +191,6 @@ public partial class MainWindow : Gtk.Window
     {
 
             a = Convert.ToDouble(pantalla.Text);
-            String display = pantalla.Text.ToString();
-            pantalla.InsertText(display + "+");
             pantalla.DeleteText(0, pantalla.Text.Length);
             signo = "-";
 
@@ -203,11 +199,20 @@ public partial class MainWindow : Gtk.Window
     protected void OnBpuntoClicked(object sender, EventArgs e)
     {
 
-        if (cont_punto == 0) { 
-        String display = pantalla.Text.ToString();
-        pantalla.DeleteText(0, pantalla.Text.Length);
-        pantalla.InsertText(display + ".");
-        cont_punto++;
+        if (cont_punto == 0)
+        {
+
+            String display = pantalla.Text.ToString();
+            if (display.Equals(""))
+            {
+                pantalla.InsertText("0," + display);
+                cont_punto++;
+            }
+            else { 
+            pantalla.DeleteText(0, pantalla.Text.Length);
+            pantalla.InsertText(display + ",");
+            cont_punto++;
+        }
         }
     }
 
