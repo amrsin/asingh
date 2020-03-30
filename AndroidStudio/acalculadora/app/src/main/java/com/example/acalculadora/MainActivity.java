@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private EditText edit_t1, edit_t2;
@@ -13,13 +15,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        //creamos mensaje emergente
+        Toast toast = Toast.makeText(this,"Bienvenido/a a ACalculadora", Toast.LENGTH_LONG);
+        toast.show();
         edit_t1= (EditText) findViewById(R.id.num_1);
         edit_t2 = (EditText) findViewById(R.id.num_2);
         text_v = (TextView) findViewById(R.id.resultado);
     }
 
-    public void suma(View view) {
+   public void suma(View view) {
         int num_1;
         int num_2;
         int suma;
