@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Calculadora</string>
+    <string name="num_1">Primer numero</string>
+    <string name="num_2">Segundo numero</string>
+    <string name="ck_suma">Suma</string>
+    <string name="ck_resta">Resta</string>
+    <string name="ck_divi">Dividir</string>
+    <string name="ck_multi">Multiplicar</string>
+    <string name="bt_calc">Calcular</string>
+    <string name="resultado">RESULTADO</string>
+    <string name="created">Created_by_Amritpal_Singh</string>
+</resources>
