@@ -38,185 +38,35 @@ public class MainActivity extends AppCompatActivity {
         int num2;
         num1 = Integer.parseInt(edit_t1.getText().toString());
         num2 = Integer.parseInt(edit_t2.getText().toString());
-
+        String result = "";
         int suma = num1 + num2;
         int resta = num1 - num2;
         int multi = num1 * num2;
 
 
         if (ck1.isChecked()==true) {
-
-            if(ck2.isChecked()!=true && ck3.isChecked()!=true && ck4.isChecked()!=true) {
-                text_v.setText(String.valueOf(num1 + " + " + num2 + " = " + suma));
-            }else {
-                if(ck2.isChecked()==true && ck3.isChecked()==true) {
-                        text_v.setText(String.valueOf(num1 + " + " + num2 + " = " + suma + "\n" + num1 + " - " + num2 + " = " + resta + "\n" + num1 + " x " + num2 + " = " + multi));
-                } }
-            }
-        if (ck2.isChecked()==true) {
-
-            if(ck1.isChecked()!=true && ck3.isChecked()!=true && ck4.isChecked()!=true) {
-                text_v.setText(String.valueOf(num1 + " - " + num2 + " = " + resta));
-             }else {
-                if(ck1.isChecked()==true) {
-                    text_v.setText(String.valueOf(num1 + " + " + num2 + " = " + suma + "\n" + num1 + " - " + num2 + " = " + resta));
-                }
-                if(ck1.isChecked()== true && ck3.isChecked()==true) {
-                    text_v.setText(String.valueOf(num1 + " + " + num2 + " = " + suma + "\n" + num1 + " - " + num2 + " = " + resta + "\n" + num1 + " x " + num2 + " = " + multi));
-
-                }
-                if(ck3.isChecked()== true && ck4.isChecked()==true) {
-                    if (num1==0 || num2==0) {
-                        Toast toast = Toast.makeText(this, "No se puede dividir entre cero", Toast.LENGTH_LONG);
-                        toast.show();
-
-                        text_v.setText(String.valueOf(num1 + " - " + num2 + " = " + resta + "\n" + num1 + " x " + num2 + " = " + multi));
-                    }else {
-                        int divi = num1 / num2;
-                        text_v.setText(String.valueOf(num1 + " - " + num2 + " = " + resta + "\n" + num1 + " x " + num2 + " = "
-                                                      + multi + "\n" + num1 + " / " + num2 + " = " + divi ));
-                    }
-                }
-
-               if (ck1.isChecked()==true && ck3.isChecked()==true && ck4.isChecked()==true){
-                    if (num1==0 || num2==0) {
-                        Toast toast = Toast.makeText(this, "No se puede dividir entre cero", Toast.LENGTH_LONG);
-                        toast.show();
-
-                        text_v.setText(String.valueOf(num1 + " + " + num2 + " = " + suma + "\n" + num1 + " - " + num2 + " = " + resta
-                                + "\n" + num1 + " x " + num2 + " = " + multi + "\n"));
-                    }else {
-                        int divi = num1 / num2;
-                        text_v.setText(String.valueOf(num1 + " + " + num2 + " = " + suma + "\n" + num1 + " - " + num2 + " = " + resta
-                                + "\n" + num1 + " x " + num2 + " = " + multi + "\n" + num1 + " / " + num2 + " = " + divi ));
-                    }
-                }
-            }
+        String cadena = String.valueOf(num1 + " + " + num2 + " = " + suma);
+        result = (result + cadena + "\n");
         }
+        if (ck2.isChecked()==true) {
+            String cadena = String.valueOf(num1 + " - " + num2 + " = " + resta);
+            result = (result + cadena + "\n");
 
+        }
         if (ck3.isChecked()==true) {
-            if(ck1.isChecked()!=true && ck2.isChecked()!=true && ck4.isChecked()!=true) {
-                text_v.setText(String.valueOf(num1 + " x " + num2 + " = " + multi));
-            }else {
-
-                if(ck1.isChecked()==true) {
-                    text_v.setText(String.valueOf(num1 + " + " + num2 + " = " + suma + "\n" + num1 + " x " + num2 + " = " + multi));
-                }
-                if(ck2.isChecked()==true) {
-                    text_v.setText(String.valueOf(num1 + " - " + num2 + " = " + resta + "\n" + num1 + " x " + num2 + " = " + multi));
-                }
-                if(ck1.isChecked()== true && ck2.isChecked()==true) {
-                    text_v.setText(String.valueOf(num1 + " + " + num2 + " = " + suma + "\n" + num1 + " - " + num2 + " = " + resta + "\n" + num1 + " x " + num2 + " = " + multi));
-                }
-                if(ck1.isChecked()== true && ck4.isChecked()==true) {
-                    if (num1==0 || num2==0) {
-                        Toast toast = Toast.makeText(this, "No se puede dividir entre cero", Toast.LENGTH_LONG);
-                        toast.show();
-
-                        text_v.setText(String.valueOf(num1 + " + " + num2 + " = " + suma + "\n" + "\n" + num1 + " x " + num2 + " = " + multi));
-                    }else {
-                        int divi = num1 / num2;
-                        text_v.setText(String.valueOf(num1 + " + " + num2 + " = " + suma + "\n" + "\n" + num1 + " x " + num2 + " = " + multi + "\n" + num1 + " / " + num2 + " = " + divi ));
-                    }
-                }
-
-                if (ck1.isChecked()==true && ck2.isChecked()==true && ck4.isChecked()==true){
-                    if (num1==0 || num2==0) {
-                        Toast toast = Toast.makeText(this, "No se puede dividir entre cero", Toast.LENGTH_LONG);
-                        toast.show();
-                        text_v.setText(String.valueOf(num1 + " + " + num2 + " = " + suma + "\n" + num1 + " - " + num2 + " = " + resta
-                                + "\n" + num1 + " x " + num2 + " = " + multi + "\n"));
-                    }else {
-                        if (num1==0 || num2==0) {
-                            Toast toast = Toast.makeText(this, "No se puede dividir entre cero", Toast.LENGTH_LONG);
-                            toast.show();
-
-                            text_v.setText(String.valueOf(num1 + " + " + num2 + " = " + suma + "\n" + num1 + " - " + num2 + " = " + resta));
-                        }else {
-                            int divi = num1 / num2;
-                            text_v.setText(String.valueOf(num1 + " + " + num2 + " = " + suma + "\n" + num1 + " - " + num2 + " = " + resta
-                                                          + "\n" + num1 + " / " + num2 + " = " + divi ));
-                        }
-                    }
-                }
-            }
+            String cadena = String.valueOf(num1 + " x " + num2 + " = " + multi);
+            result = (result + cadena + "\n");
         }
         if (ck4.isChecked()==true) {
-
             if (num1 == 0 || num2 == 0) {
                 Toast toast = Toast.makeText(this, "No se puede dividir entre cero", Toast.LENGTH_LONG);
                 toast.show();
             } else {
                 int divi = num1 / num2;
-                if (ck1.isChecked() != true && ck2.isChecked() != true && ck3.isChecked() != true) {
-
-                    text_v.setText(String.valueOf(num1 + " / " + num2 + " = " + divi));
-                } else {
-                    if (ck1.isChecked() == true) {
-                        text_v.setText(String.valueOf(num1 + " + " + num2 + " = " + suma + "\n" + num1 + " / " + num2 + " = " + divi));
-                    }
-                    if (ck2.isChecked() == true) {
-                        text_v.setText(String.valueOf(num1 + " - " + num2 + " = " + resta + "\n" + num1 + " / " + num2 + " = " + divi));
-                    }
-                    if (ck3.isChecked() == true) {
-                        text_v.setText(String.valueOf(num1 + " * " + num2 + " = " + multi + "\n" + num1 + " / " + num2 + " = " + divi));
-                    }
-                    if (ck1.isChecked() == true && ck2.isChecked() == true) {
-                        text_v.setText(String.valueOf(num1 + " + " + num2 + " = " + suma + "\n" + num1 + " - " + num2 + " = " + resta + "\n"
-                                                      + num1 + " / " + num2 + " = " + divi));
-                    }
-                    if (ck1.isChecked() == true && ck2.isChecked() == true && ck3.isChecked() == true) {
-                        if (num1 == 0 || num2 == 0) {
-                            Toast toast = Toast.makeText(this, "No se puede dividir entre cero", Toast.LENGTH_LONG);
-                            toast.show();
-
-                            text_v.setText(String.valueOf(num1 + " + " + num2 + " = " + suma + "\n" + num1 + " - " + num2 + " = " + resta
-                                    + "\n" + num1 + " x " + num2 + " = " + multi + "\n"));
-                        } else {
-                            text_v.setText(String.valueOf(num1 + " + " + num2 + " = " + suma + "\n" + num1 + " - " + num2 + " = " + resta
-                                    + "\n" + num1 + " x " + num2 + " = " + multi + "\n" + num1 + " / " + num2 + " = " + divi));
-                        }
-                    }
-                    if (ck1.isChecked() == true && ck3.isChecked() == true) {
-                        if (num1 == 0 || num2 == 0) {
-                            Toast toast = Toast.makeText(this, "No se puede dividir entre cero", Toast.LENGTH_LONG);
-                            toast.show();
-
-                            text_v.setText(String.valueOf(num1 + " + " + num2 + " = " + suma + "\n" + num1 + " - " + num2 + " = " + resta
-                                    + "\n" + num1 + " x " + num2 + " = " + multi + "\n"));
-                        } else {
-                            text_v.setText(String.valueOf(num1 + " + " + num2 + " = " + suma +  "\n" + num1 + " x " + num2 + " = " + multi + "\n" + num1
-                                                           + " / " + num2 + " = " + divi));
-                        }
-
-                    }
-                    if (ck2.isChecked() == true && ck4.isChecked() == true && ck3.isChecked() == true) {
-                        if (num1 == 0 || num2 == 0) {
-                            Toast toast = Toast.makeText(this, "No se puede dividir entre cero", Toast.LENGTH_LONG);
-                            toast.show();
-
-                            text_v.setText(String.valueOf(num1 + " + " + num2 + " = " + suma + "\n" + num1 + " - " + num2 + " = " + resta
-                                    + "\n" + num1 + " x " + num2 + " = " + multi + "\n"));
-                        } else {
-                            text_v.setText(String.valueOf(num1 + " - " + num2 + " = " + resta + "\n" + num1 + " x " + num2 + " = " + multi
-                                                          + "\n" + num1 + " / " + num2 + " = " + divi));
-                        }
-
-                    }
-                    if (ck1.isChecked() == true && ck2.isChecked() == true && ck3.isChecked() == true) {
-                        if (num1 == 0 || num2 == 0) {
-                            Toast toast = Toast.makeText(this, "No se puede dividir entre cero", Toast.LENGTH_LONG);
-                            toast.show();
-
-                            text_v.setText(String.valueOf(num1 + " + " + num2 + " = " + suma + "\n " + num1 + " - " + num2 + " = " + resta
-                                    + "\n" + num1 + " x " + num2 + " = " + multi + "\n"));
-                        } else {
-                            text_v.setText(String.valueOf( num1 + " + " + num2 + " = " + suma + "\n" +num1 + " - " + num2 + " = " + resta + "\n" + num1
-                                                           + " x " + num2 + " = " + multi + "\n" + num1 + " / " + num2 + " = " + divi));
-                        }
-                    }
-                }
+                String cadena = String.valueOf(num1 + " / " + num2 + " = " + divi);
+                result = (result + cadena + "\n");
             }
         }
+        text_v.setText(result);
     }
 }
