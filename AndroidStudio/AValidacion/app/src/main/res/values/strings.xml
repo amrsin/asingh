@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AValidacion</string>
+    <string name="txt_nombre">Nombre</string>
+    <string name="txt_password">Password</string>
+    <string name="bt_validar">VALIDAR</string>
+    <string name="created">Created_by_Amritpal_Singh</string>
+    <string name="txt_bienvenida">Bienvenido/a</string>
+    <string name="bt_cerrar">CERRAR</string>
+</resources>
