@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Work sign</string>
+    <string name="txt_usuario">Usuario</string>
+    <string name="txt_password">Password</string>
+    <string name="bt_validar">ACCEDER</string>
+    <string name="created">Created_by_Amritpal_Singh</string>
+    <string name="txt_bienvenida">Bienvenido/a</string>
+    <string name="bt_cerrar">CERRAR</string>
+</resources>
