@@ -1,7 +1,7 @@
 package com.example.final_app;
-
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,8 +10,10 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.Scanner;
 
 public class MainActivity extends AppCompatActivity {
@@ -26,22 +28,33 @@ public class MainActivity extends AppCompatActivity {
 
         et1 = (EditText) findViewById(R.id.txt_usuario);
         et2 = (EditText) findViewById(R.id.txt_password);
-    }
+        try
+        {
+            OutputStreamWriter file= new OutputStreamWriter(
+                            openFileOutput("info.txt", Context.MODE_PRIVATE));
+
+            file.write("prueba,123,nombre completo,empresa,puesto trabajo,");
+            file.close();
+        }
+        catch (Exception ex)
+        {
+            Log.e("Ficheros", "Error al escribir fichero a memoria interna");
+        }
+        }
 
     public void Validar(View view) {
         String usuario = et1.getText().toString();
         String password = et2.getText().toString();
 
         try {
-            InputStream file =
-                    getResources().openRawResource(R.raw.usr_pwd);
+            InputStream file = openFileInput("info.txt");
 
             Scanner sc = new Scanner(file);
             while (sc.hasNext()) {
                 String linea = sc.nextLine();
 
                 if (usuario.isEmpty()) {
-                    Toast.makeText(this, "DEBE INTRODUCIR UN NOMBRE", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, "DEBE INTRODUCIR UN USUARIO", Toast.LENGTH_LONG).show();
                 }
                 if (password.isEmpty()) {
                     Toast.makeText(this, "DEBE INTRODUCIR UN PASSWORD", Toast.LENGTH_LONG).show();
@@ -59,11 +72,10 @@ public class MainActivity extends AppCompatActivity {
                             validar.putExtra("Nombre", et1.getText().toString());
                             startActivity(validar);
                             entrado = true;
-                        } else {
-                            if (entrado == false) {
-                                Toast.makeText(this, "Datos erróneos, Por favor intente de nuevo", Toast.LENGTH_SHORT).show();
-                            }
                         }
+                    }
+                    if (entrado == false) {
+                        Toast.makeText(this, "Datos erróneos, Por favor intente de nuevo", Toast.LENGTH_SHORT).show();
                     }
 
                   }
@@ -73,5 +85,11 @@ public class MainActivity extends AppCompatActivity {
         {
             Log.e("Ficheros", "Error al leer fichero desde recurso raw");
         }
+    }
+    public void crear_cuenta(View view) {
+        Toast.makeText(this, "DONE!", Toast.LENGTH_SHORT).show();
+        Intent validar = new Intent(this, RegistrarActivity.class);
+        validar.putExtra("Nombre", et1.getText().toString());
+        startActivity(validar);
     }
 }

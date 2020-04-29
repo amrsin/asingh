@@ -3,7 +3,14 @@
     <string name="txt_usuario">Usuario</string>
     <string name="txt_password">Password</string>
     <string name="bt_validar">ACCEDER</string>
+    <string name="bt_registrar">CREAR CUENTA</string>
     <string name="created">Created_by_Amritpal_Singh</string>
     <string name="txt_bienvenida">Bienvenido/a</string>
     <string name="bt_cerrar">CERRAR</string>
+    //activity_registrar
+    <string name="txt_nom_completo">Nombre Completo</string>
+    <string name="txt_empresa">Empresa</string>
+    <string name="txt_new_usuario">Usuario</string>
+    <string name="txt_password_confirm">Confirmar password</string>
+    <string name="txt_puesto_trabajo">Puesto trabajo</string>
 </resources>
