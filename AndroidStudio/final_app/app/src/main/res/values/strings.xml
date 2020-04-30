@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Work sign</string>
+    <string name="tv_usuario">Usuario:</string>
     <string name="txt_usuario">Usuario</string>
+    <string name="tv_password">Password:</string>
     <string name="txt_password">Password</string>
     <string name="bt_validar">ACCEDER</string>
     <string name="bt_registrar">CREAR CUENTA</string>

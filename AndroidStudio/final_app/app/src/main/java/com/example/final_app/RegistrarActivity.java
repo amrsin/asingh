@@ -1,15 +1,21 @@
 package com.example.final_app;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.io.InputStream;
+import java.io.OutputStreamWriter;
+import java.util.Scanner;
+
 public class RegistrarActivity extends AppCompatActivity {
 
     private EditText et1, et2, et3, et4, et5, et6;
-    boolean entrado = false;
+    boolean distinto = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +38,8 @@ public class RegistrarActivity extends AppCompatActivity {
         String usuario = et4.getText().toString();
         String password = et5.getText().toString();
         String password2 = et6.getText().toString();
-
+        String linea_aux = "";
+        String cuenta = usuario + "," + password + "," + nom_completo + "," + empresa + "," + puest_trabajo + ",";
 
 
         if (nom_completo.isEmpty()) {
@@ -52,6 +59,54 @@ public class RegistrarActivity extends AppCompatActivity {
         }
         if (password2.isEmpty()) {
             Toast.makeText(this, "DEBE INTRODUCIR UN CONFIRMAR PASSWORD", Toast.LENGTH_SHORT).show();
+        }
+
+        try {
+            InputStream file = openFileInput("info.txt");
+
+            Scanner sc = new Scanner(file);
+            while (sc.hasNext()) {
+                String linea = sc.nextLine();
+                linea_aux = linea_aux + linea + "\n";
+
+                if (!nom_completo.isEmpty() && !empresa.isEmpty() && !puest_trabajo.isEmpty() && !usuario.isEmpty()
+                        && !password.isEmpty() && !password2.isEmpty()) {
+                    String[] datos = linea.split(",");
+
+                    if(datos[0].equals(usuario)) {
+                        Toast.makeText(this, "NOMBRE USUARIO NO DISPONIBLE", Toast.LENGTH_SHORT).show();
+                        distinto = false;
+                    }
+                    if (password.length()<8) {
+
+                        Toast.makeText(this, "PASSWORD DEBE DE TENER UN MINIMO TAMAÑO DE 8 ", Toast.LENGTH_SHORT).show();
+                    }
+                    if (!password2.equals(password)) {
+
+                            Toast.makeText(this, "PASSWORD CONFIRMAR NO COINCIDE CON PASSWORD", Toast.LENGTH_SHORT).show();
+                        }
+                }
+            }
+            if (distinto == true) {
+
+                try
+                {
+                    OutputStreamWriter Archivo= new OutputStreamWriter(
+                            openFileOutput("info.txt", Context.MODE_PRIVATE));
+
+                    Archivo.write(linea_aux + cuenta + "\n");
+                    Archivo.close();
+                    Toast.makeText(this, "USUARIO CON NOMBRE " + nom_completo + " CREADO", Toast.LENGTH_SHORT).show();
+
+                }
+                catch (Exception ex)
+                {
+                    Log.e("Ficheros", "Error al escribir fichero a memoria interna");
+                }
+            }
+
+        } catch (Exception e) {
+
         }
     }
 }

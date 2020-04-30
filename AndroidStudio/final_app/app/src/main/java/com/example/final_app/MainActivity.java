@@ -1,6 +1,5 @@
 package com.example.final_app;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,11 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import java.io.BufferedReader;
-import java.io.File;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.Scanner;
 
@@ -54,10 +49,10 @@ public class MainActivity extends AppCompatActivity {
                 String linea = sc.nextLine();
 
                 if (usuario.isEmpty()) {
-                    Toast.makeText(this, "DEBE INTRODUCIR UN USUARIO", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, "DEBE INTRODUCIR UN USUARIO", Toast.LENGTH_SHORT).show();
                 }
                 if (password.isEmpty()) {
-                    Toast.makeText(this, "DEBE INTRODUCIR UN PASSWORD", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, "DEBE INTRODUCIR UN PASSWORD", Toast.LENGTH_SHORT).show();
                 }
 
                 if (usuario.isEmpty()==false && password.isEmpty()==false) {
