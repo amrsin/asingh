@@ -88,20 +88,21 @@ public class RegistrarActivity extends AppCompatActivity {
                 }
             }
             if (distinto == true) {
+                if (!nom_completo.isEmpty() && !empresa.isEmpty() && !puest_trabajo.isEmpty() && !usuario.isEmpty()
+                        && !password.isEmpty() && !password2.isEmpty()) {
 
-                try
-                {
-                    OutputStreamWriter Archivo= new OutputStreamWriter(
-                            openFileOutput("info.txt", Context.MODE_PRIVATE));
 
-                    Archivo.write(linea_aux + cuenta + "\n");
-                    Archivo.close();
-                    Toast.makeText(this, "USUARIO CON NOMBRE " + nom_completo + " CREADO", Toast.LENGTH_SHORT).show();
+                    try {
+                        OutputStreamWriter Archivo = new OutputStreamWriter(
+                                openFileOutput("info.txt", Context.MODE_PRIVATE));
 
-                }
-                catch (Exception ex)
-                {
-                    Log.e("Ficheros", "Error al escribir fichero a memoria interna");
+                        Archivo.write(linea_aux + cuenta + "\n");
+                        Archivo.close();
+                        Toast.makeText(this, "USUARIO CON NOMBRE " + nom_completo + " CREADO", Toast.LENGTH_SHORT).show();
+
+                    } catch (Exception ex) {
+                        Log.e("Ficheros", "Error al escribir fichero a memoria interna");
+                    }
                 }
             }
 
