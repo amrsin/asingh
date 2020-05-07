@@ -21,4 +21,8 @@
     <string name="txt_puesto_trabajo">Puesto trabajo</string>
     <string name="tv_puesto_trabajo">Puesto trabajo:</string>
 
+    //activity fichar
+    <string name="bt_in">IN</string>
+    <string name="bt_out">OUT</string>
+
 </resources>

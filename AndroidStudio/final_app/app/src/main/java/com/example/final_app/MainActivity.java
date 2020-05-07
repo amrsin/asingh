@@ -98,11 +98,15 @@ public class MainActivity extends AppCompatActivity {
                     String[] datos = linea.split(",");
                     String usr = datos[0];
                     String pwd = datos[1];
+                    String nom_complt = datos[2];
+                    String empresa = datos[3];
                     if (usuario.equals(datos[0])) {
                            if (password.equals(pwd) && usuario.equals(usr)) {
                             Toast.makeText(this, "DONE!", Toast.LENGTH_SHORT).show();
                             Intent validar = new Intent(this, ficharActivity.class);
-                            validar.putExtra("Nombre", et1.getText().toString());
+                            validar.putExtra("nom_complt", nom_complt );
+                            validar.putExtra("empresa",empresa);
+                            validar.putExtra("usr", usuario);
                             startActivity(validar);
                             entrado = true;
                         }
@@ -110,6 +114,7 @@ public class MainActivity extends AppCompatActivity {
                     if (entrado == false) {
                         Toast.makeText(this, "Datos erróneos, Por favor intente de nuevo", Toast.LENGTH_SHORT).show();
                     }
+
 
                   }
                 }
