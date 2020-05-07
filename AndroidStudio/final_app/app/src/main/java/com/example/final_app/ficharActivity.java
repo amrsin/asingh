@@ -90,7 +90,6 @@ public class ficharActivity extends AppCompatActivity {
 
         try {
             InputStream file = openFileInput("registro.txt");
-
             Scanner sc = new Scanner(file);
             while (sc.hasNext()) {
                 String linea = sc.nextLine();
@@ -106,16 +105,6 @@ public class ficharActivity extends AppCompatActivity {
 
         }
 
-        try {
-            OutputStreamWriter Archivo = new OutputStreamWriter(
-                    openFileOutput("registro.txt", Context.MODE_PRIVATE));
-
-            Archivo.write(usr + "," + dateString + "\n");
-            Archivo.close();
-
-        } catch (Exception ex) {
-            Log.e("Ficheros", "Error al escribir fichero a memoria interna");
-        }
         if (existe) {
             Toast.makeText(this, "YA EXISTE REGISTRO " + status_work + " de " + fecha[0], Toast.LENGTH_SHORT).show();
         } else {
@@ -134,5 +123,6 @@ public class ficharActivity extends AppCompatActivity {
             }
         }
         existe = false;
+        linea_aux = "";
     }
 }
