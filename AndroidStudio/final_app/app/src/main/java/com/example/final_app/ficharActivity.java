@@ -10,6 +10,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStreamWriter;
 import java.text.SimpleDateFormat;
@@ -24,23 +27,22 @@ public class ficharActivity extends AppCompatActivity {
     private boolean existe = false;
     private String usr;
     private String[] fecha;
-    private String linea_aux = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
+        File file = new File(getApplicationContext().getFilesDir() + "registro.txt");
         try {
-            OutputStreamWriter file = new OutputStreamWriter(
-                    openFileOutput("registro.txt", Context.MODE_PRIVATE));
-
-            file.write("prueba,May 01 2020,07-47-09PM,IN");
-            file.close();
-        } catch (Exception ex) {
-            Log.e("Ficheros", "Error al escribir fichero a memoria interna");
+            if (!file.exists()) {
+                file.createNewFile();
+                FileWriter Archivo = new FileWriter(file);
+                Archivo.write("prueba,May 01 2020,07-47-09PM,IN\n");
+                Archivo.close();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-
         setContentView(R.layout.activity_fichar);
         tv2 = (TextView) findViewById(R.id.tv_bienvenida);
         img1 = (ImageView) findViewById(R.id.img_work_in);
@@ -70,14 +72,10 @@ public class ficharActivity extends AppCompatActivity {
                     }
                 } catch (InterruptedException e) {
                 }
-
-
             }
         };
         t.start();
-
     }
-
     public void click_in(View view) {
         click("IN");
     }
@@ -87,9 +85,9 @@ public class ficharActivity extends AppCompatActivity {
     }
 
     public void click(String status_work) {
-
+        String linea_aux = "";
         try {
-            InputStream file = openFileInput("registro.txt");
+            File file = new File(getApplicationContext().getFilesDir() + "registro.txt");
             Scanner sc = new Scanner(file);
             while (sc.hasNext()) {
                 String linea = sc.nextLine();
@@ -100,7 +98,6 @@ public class ficharActivity extends AppCompatActivity {
                     existe = true;
                 }
             }
-
         } catch (Exception e) {
 
         }
@@ -111,9 +108,8 @@ public class ficharActivity extends AppCompatActivity {
 
             String registro = usr + "," + fecha[0] + "," + fecha[1] + "," + status_work;
             try {
-                OutputStreamWriter Archivo = new OutputStreamWriter(
-                        openFileOutput("registro.txt", Context.MODE_PRIVATE));
-
+                File file = new File(getApplicationContext().getFilesDir() + "registro.txt");
+                FileWriter Archivo = new FileWriter(file);
                 Archivo.write(linea_aux + registro + "\n");
                 Archivo.close();
                 Toast.makeText(this, "AGREGANDO REGISTRO " + status_work, Toast.LENGTH_SHORT).show();
@@ -123,6 +119,5 @@ public class ficharActivity extends AppCompatActivity {
             }
         }
         existe = false;
-        linea_aux = "";
     }
 }

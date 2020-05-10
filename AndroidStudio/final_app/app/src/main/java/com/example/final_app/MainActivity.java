@@ -12,6 +12,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStreamWriter;
 import java.util.Scanner;
@@ -28,19 +32,18 @@ public class MainActivity extends AppCompatActivity {
 
         et1 = (EditText) findViewById(R.id.txt_usuario);
         et2 = (EditText) findViewById(R.id.txt_password);
-        try
-        {
-            OutputStreamWriter file= new OutputStreamWriter(
-                            openFileOutput("info.txt", Context.MODE_PRIVATE));
-
-            file.write("prueba,123,nombre completo,empresa,puesto trabajo,");
-            file.close();
+        File file = new File(getApplicationContext().getFilesDir() + "info.txt");
+        try {
+            if (!file.exists()) {
+                file.createNewFile();
+                FileWriter Archivo = new FileWriter(file);
+                Archivo.write("prueba,123,nombre completo,empresa,puesto trabajo,");
+                Archivo.close();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        catch (Exception ex)
-        {
-            Log.e("Ficheros", "Error al escribir fichero a memoria interna");
-        }
-        }
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -78,10 +81,9 @@ public class MainActivity extends AppCompatActivity {
     public void Validar(View view) {
         String usuario = et1.getText().toString();
         String password = et2.getText().toString();
+        File file = new File(getApplicationContext().getFilesDir() + "info.txt");
 
         try {
-            InputStream file = openFileInput("info.txt");
-
             Scanner sc = new Scanner(file);
             while (sc.hasNext()) {
                 String linea = sc.nextLine();
@@ -114,11 +116,9 @@ public class MainActivity extends AppCompatActivity {
                     if (entrado == false) {
                         Toast.makeText(this, "Datos erróneos, Por favor intente de nuevo", Toast.LENGTH_SHORT).show();
                     }
-
-
                   }
                 }
-                file.close();
+                sc.close();
         }catch (Exception ex)
         {
             Log.e("Ficheros", "Error al leer fichero desde recurso raw");

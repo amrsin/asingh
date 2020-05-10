@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.io.File;
+import java.io.FileWriter;
 import java.io.InputStream;
 import java.io.OutputStreamWriter;
 import java.util.Scanner;
@@ -62,8 +64,7 @@ public class RegistrarActivity extends AppCompatActivity {
         }
 
         try {
-            InputStream file = openFileInput("info.txt");
-
+            File file = new File(getApplicationContext().getFilesDir() + "info.txt");
             Scanner sc = new Scanner(file);
             while (sc.hasNext()) {
                 String linea = sc.nextLine();
@@ -89,23 +90,18 @@ public class RegistrarActivity extends AppCompatActivity {
             }
             if (distinto == true) {
                 if (!nom_completo.isEmpty() && !empresa.isEmpty() && !puest_trabajo.isEmpty() && !usuario.isEmpty()
-                        && !password.isEmpty() && !password2.isEmpty()) {
-
+                        && !password.isEmpty() && !password2.isEmpty() && password.length()>8 && password2.equals(password)) {
 
                     try {
-                        OutputStreamWriter Archivo = new OutputStreamWriter(
-                                openFileOutput("info.txt", Context.MODE_PRIVATE));
-
+                        FileWriter Archivo = new FileWriter(file);
                         Archivo.write(linea_aux + cuenta + "\n");
                         Archivo.close();
                         Toast.makeText(this, "USUARIO CON NOMBRE " + nom_completo + " CREADO", Toast.LENGTH_SHORT).show();
-
                     } catch (Exception ex) {
                         Log.e("Ficheros", "Error al escribir fichero a memoria interna");
                     }
                 }
             }
-
         } catch (Exception e) {
 
         }
