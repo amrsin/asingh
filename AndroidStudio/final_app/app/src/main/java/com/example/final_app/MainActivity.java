@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 Archivo.close();
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            Log.e("Ficheros", "Error al escribir en el fichero info.txt");
         }
     }
 
@@ -105,6 +105,8 @@ public class MainActivity extends AppCompatActivity {
                     if (usuario.equals(datos[0])) {
                            if (password.equals(pwd) && usuario.equals(usr)) {
                             Toast.makeText(this, "DONE!", Toast.LENGTH_SHORT).show();
+                            et1.setText("");
+                            et2.setText("");
                             Intent validar = new Intent(this, ficharActivity.class);
                             validar.putExtra("nom_complt", nom_complt );
                             validar.putExtra("empresa",empresa);
@@ -113,15 +115,17 @@ public class MainActivity extends AppCompatActivity {
                             entrado = true;
                         }
                     }
-                    if (entrado == false) {
-                        Toast.makeText(this, "Datos erróneos, Por favor intente de nuevo", Toast.LENGTH_SHORT).show();
-                    }
+
                   }
                 }
+                 if (entrado == false) {
+                Toast.makeText(this, "Datos erróneos, Por favor intente de nuevo", Toast.LENGTH_SHORT).show();
+              }
+                entrado = false;
                 sc.close();
         }catch (Exception ex)
         {
-            Log.e("Ficheros", "Error al leer fichero desde recurso raw");
+            Log.e("Ficheros", "Error al escribir en el fichero info.txt");
         }
     }
     public void crear_cuenta(View view) {

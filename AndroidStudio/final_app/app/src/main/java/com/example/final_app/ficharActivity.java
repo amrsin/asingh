@@ -1,10 +1,15 @@
 package com.example.final_app;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -32,6 +37,7 @@ public class ficharActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
         File file = new File(getApplicationContext().getFilesDir() + "registro.txt");
         try {
             if (!file.exists()) {
@@ -41,7 +47,8 @@ public class ficharActivity extends AppCompatActivity {
                 Archivo.close();
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            Log.e("Ficheros", "Error al crear el fichero registro.txt");
+
         }
         setContentView(R.layout.activity_fichar);
         tv2 = (TextView) findViewById(R.id.tv_bienvenida);
@@ -76,6 +83,39 @@ public class ficharActivity extends AppCompatActivity {
         };
         t.start();
     }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.exit) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(ficharActivity.this);
+            builder.setMessage("¿Quiere cerrar session?");
+            builder.setCancelable(true);
+
+            builder.setNegativeButton("YES", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    finish();
+                }
+            });
+
+            builder.setPositiveButton("NO", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.cancel();
+                }
+            });
+            AlertDialog alertDialog = builder.create();
+            alertDialog.show();
+        }
+        return true;
+    }
+
     public void click_in(View view) {
         click("IN");
     }
@@ -115,9 +155,63 @@ public class ficharActivity extends AppCompatActivity {
                 Toast.makeText(this, "AGREGANDO REGISTRO " + status_work, Toast.LENGTH_SHORT).show();
 
             } catch (Exception ex) {
-                Log.e("Ficheros", "Error al escribir fichero a memoria interna");
+                Log.e("Ficheros", "Error al escribir en el fichero resgistro.txt");
             }
         }
         existe = false;
     }
-}
+
+    public  void registro_diario(View view) {
+
+        registro("diario");
+
+    }
+
+    public  void registro_total(View view) {
+
+        registro("total");
+    }
+
+    public void registro(String registro) {
+        String linea_aux = "";
+        try {
+            File file = new File(getApplicationContext().getFilesDir() + "registro.txt");
+            Scanner sc = new Scanner(file);
+            while (sc.hasNext()) {
+                String linea = sc.nextLine();
+                String[] datos = linea.split(",");
+                fecha = dateString.split(",");
+
+                if (registro.equals("diario")) {
+                    if (datos[0].equals(usr) && datos[1].equals(fecha[0]) ) {
+                        linea_aux = linea_aux + linea + "\n";
+                    }
+
+                }
+
+                if (registro.equals("total")) {
+                    if(datos[0].equals(usr)) {
+                        linea_aux = linea_aux + linea + "\n";
+                    }
+                }
+            }
+            if (linea_aux.isEmpty()) {
+                linea_aux = "No hay registros de " + fecha[0];
+            }
+
+        } catch (Exception e) {
+
+        }
+
+            AlertDialog alertDialog = new AlertDialog.Builder(ficharActivity.this).create();
+            alertDialog.setTitle("Registro " + registro);
+            alertDialog.setMessage(linea_aux);
+            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
+            alertDialog.show();
+        }
+    }

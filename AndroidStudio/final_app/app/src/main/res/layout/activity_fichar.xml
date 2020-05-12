@@ -10,13 +10,14 @@
 
     <TextView
         android:id="@+id/tv_date"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
+        android:layout_width="320dp"
+        android:layout_height="55dp"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="110dp"
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
+        android:gravity="center"
         android:text="Date"
         android:textColor="#ffffff"
         android:textSize="24sp"
@@ -30,7 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
         android:text="TextView"
@@ -46,7 +47,7 @@
         android:layout_height="100dp"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
         app:layout_constraintEnd_toStartOf="@+id/img_work_out"
@@ -60,7 +61,7 @@
         android:layout_height="100dp"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="19dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -70,31 +71,84 @@
 
     <Button
         android:id="@+id/bt_in"
-        android:layout_width="55dp"
-        android:layout_marginStart="49dp"
-        android:layout_marginLeft="49dp"
-        android:layout_marginTop="5dp"
+        android:layout_width="58dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginLeft="42dp"
+        android:layout_marginTop="35dp"
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
+        android:background="@drawable/text_view_background"
         android:onClick="click_in"
         android:text="@string/bt_in"
         app:layout_constraintEnd_toStartOf="@+id/bt_out"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_work_in"
-        android:layout_height="wrap_content" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_date" />
 
     <Button
         android:id="@+id/bt_out"
-        android:layout_width="55dp"
+        android:layout_width="57dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginRight="47dp"
+        android:background="@drawable/text_view_background"
+        android:onClick="click_out"
+        android:text="@string/bt_out"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bt_in"
+        app:layout_constraintTop_toBottomOf="@+id/tv_date" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="25dp"
+        android:background="#546e7a"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_bienvenida" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="20dp"
+        android:background="#546e7a"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_work_in" />
+
+    <Button
+        android:id="@+id/bt_registro_diario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginLeft="42dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:onClick="registro_diario"
+        android:text="@string/bt_registro_diario"
+        app:layout_constraintEnd_toStartOf="@+id/bt_registro_total"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <Button
+        android:id="@+id/bt_registro_total"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="49dp"
-        android:layout_marginRight="49dp"
-        android:onClick="click_out"
-        android:text="@string/bt_out"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:onClick="registro_total"
+        android:text="@string/bt_registro_total"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/bt_in"
-        app:layout_constraintTop_toBottomOf="@+id/img_work_out" />
+        app:layout_constraintStart_toEndOf="@+id/bt_registro_diario"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

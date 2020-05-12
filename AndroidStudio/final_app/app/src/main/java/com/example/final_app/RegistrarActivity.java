@@ -98,12 +98,12 @@ public class RegistrarActivity extends AppCompatActivity {
                         Archivo.close();
                         Toast.makeText(this, "USUARIO CON NOMBRE " + nom_completo + " CREADO", Toast.LENGTH_SHORT).show();
                     } catch (Exception ex) {
-                        Log.e("Ficheros", "Error al escribir fichero a memoria interna");
+                        Log.e("Ficheros", "Error al escribir en el fichero info.txt");
                     }
                 }
             }
         } catch (Exception e) {
-
+            Log.e("Ficheros", "Error al leer en el fichero info.txt");
         }
     }
 }
