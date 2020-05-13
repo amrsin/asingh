@@ -83,17 +83,18 @@ public class MainActivity extends AppCompatActivity {
         String password = et2.getText().toString();
         File file = new File(getApplicationContext().getFilesDir() + "info.txt");
 
+        if (usuario.isEmpty()) {
+            Toast.makeText(this, "DEBE INTRODUCIR UN USUARIO", Toast.LENGTH_SHORT).show();
+        }
+        if (password.isEmpty()) {
+            Toast.makeText(this, "DEBE INTRODUCIR UN PASSWORD", Toast.LENGTH_SHORT).show();
+        }
+
         try {
             Scanner sc = new Scanner(file);
             while (sc.hasNext()) {
                 String linea = sc.nextLine();
 
-                if (usuario.isEmpty()) {
-                    Toast.makeText(this, "DEBE INTRODUCIR UN USUARIO", Toast.LENGTH_SHORT).show();
-                }
-                if (password.isEmpty()) {
-                    Toast.makeText(this, "DEBE INTRODUCIR UN PASSWORD", Toast.LENGTH_SHORT).show();
-                }
 
                 if (usuario.isEmpty()==false && password.isEmpty()==false) {
 
@@ -105,8 +106,8 @@ public class MainActivity extends AppCompatActivity {
                     if (usuario.equals(datos[0])) {
                            if (password.equals(pwd) && usuario.equals(usr)) {
                             Toast.makeText(this, "DONE!", Toast.LENGTH_SHORT).show();
-                            et1.setText("");
-                            et2.setText("");
+                            et1.setText(null);
+                            et2.setText(null);
                             Intent validar = new Intent(this, ficharActivity.class);
                             validar.putExtra("nom_complt", nom_complt );
                             validar.putExtra("empresa",empresa);
@@ -118,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
 
                   }
                 }
-                 if (entrado == false) {
+                 if (entrado == false && !usuario.isEmpty() && !password.isEmpty()) {
                 Toast.makeText(this, "Datos erróneos, Por favor intente de nuevo", Toast.LENGTH_SHORT).show();
               }
                 entrado = false;

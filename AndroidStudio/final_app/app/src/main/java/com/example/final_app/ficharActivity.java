@@ -43,7 +43,7 @@ public class ficharActivity extends AppCompatActivity {
             if (!file.exists()) {
                 file.createNewFile();
                 FileWriter Archivo = new FileWriter(file);
-                Archivo.write("prueba,May 01 2020,07-47-09PM,IN\n");
+                Archivo.write("prueba,May 01 2020,07-47-09 PM,IN\n");
                 Archivo.close();
             }
         } catch (IOException e) {
@@ -115,6 +115,7 @@ public class ficharActivity extends AppCompatActivity {
         }
         return true;
     }
+
 
     public void click_in(View view) {
         click("IN");
@@ -195,9 +196,13 @@ public class ficharActivity extends AppCompatActivity {
                     }
                 }
             }
-            if (linea_aux.isEmpty()) {
-                linea_aux = "No hay registros de " + fecha[0];
+            if (linea_aux.isEmpty() && registro.equals("diario")) {
+                linea_aux = "No hay registros de " + usr + "," + fecha[0];
             }
+            if (linea_aux.isEmpty() && registro.equals("total")) {
+                linea_aux = "No hay registros de " + usr;
+            }
+            linea_aux = linea_aux.replaceAll("," , " - ");
 
         } catch (Exception e) {
 
@@ -214,4 +219,48 @@ public class ficharActivity extends AppCompatActivity {
                     });
             alertDialog.show();
         }
+
+
+    public void perfil(View view) {
+        String linea_aux = "";
+        try {
+            File file = new File(getApplicationContext().getFilesDir() + "info.txt");
+            Scanner sc = new Scanner(file);
+            while (sc.hasNext()) {
+                String linea = sc.nextLine();
+                String[] datos = linea.split(",");
+
+                if (usr.equals(datos[0])) {
+
+                    linea_aux = "-------------------------------------------------------------------\n" +
+                                "Usuario | " + datos[0] + "\n" +
+                                "Nombre completo | " + datos[2] + "\n" +
+                                "Empresa | " + datos[3] + "\n" +
+                                "Puesto trabajo | " + datos[4] + "\n" +
+                                "-------------------------------------------------------------------";
+                }
+            }
+
+        } catch (Exception e) {
+
+        }
+
+        AlertDialog alertDialog = new AlertDialog.Builder(ficharActivity.this).create();
+        alertDialog.setTitle("Perfil");
+        alertDialog.setMessage(linea_aux);
+        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+
+                });
+        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "CERRAR SESION",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            finish();
+                        }
+                    });
+        alertDialog.show();
     }
+}

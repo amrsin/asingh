@@ -24,6 +24,8 @@
     //activity fichar
     <string name="bt_in">IN</string>
     <string name="bt_out">OUT</string>
+    <string name="tv_resgistro">Registro</string>
     <string name="bt_registro_diario">Registro diario</string>
     <string name="bt_registro_total">Registro total</string>
+
 </resources>

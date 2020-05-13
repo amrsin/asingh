@@ -41,7 +41,7 @@ public class RegistrarActivity extends AppCompatActivity {
         String password = et5.getText().toString();
         String password2 = et6.getText().toString();
         String linea_aux = "";
-        String cuenta = usuario + "," + password + "," + nom_completo + "," + empresa + "," + puest_trabajo + ",";
+        String cuenta = usuario.trim() + "," + password.trim() + "," + nom_completo.trim() + "," + empresa.trim() + "," + puest_trabajo.trim() + ",";
 
 
         if (nom_completo.isEmpty()) {
