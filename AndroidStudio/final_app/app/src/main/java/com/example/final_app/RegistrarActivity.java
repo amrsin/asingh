@@ -79,18 +79,16 @@ public class RegistrarActivity extends AppCompatActivity {
                         distinto = false;
                     }
                     if (password.length()<8) {
-
                         Toast.makeText(this, "PASSWORD DEBE DE TENER UN MINIMO TAMAÑO DE 8 ", Toast.LENGTH_SHORT).show();
                     }
                     if (!password2.equals(password)) {
-
-                            Toast.makeText(this, "PASSWORD CONFIRMAR NO COINCIDE CON PASSWORD", Toast.LENGTH_SHORT).show();
-                        }
+                        Toast.makeText(this, "PASSWORD CONFIRMAR NO COINCIDE CON PASSWORD", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
             if (distinto == true) {
                 if (!nom_completo.isEmpty() && !empresa.isEmpty() && !puest_trabajo.isEmpty() && !usuario.isEmpty()
-                        && !password.isEmpty() && !password2.isEmpty() && password.length()>8 && password2.equals(password)) {
+                        && !password.isEmpty() && !password2.isEmpty() && password.length()>=8 && password2.equals(password)) {
 
                     try {
                         FileWriter Archivo = new FileWriter(file);

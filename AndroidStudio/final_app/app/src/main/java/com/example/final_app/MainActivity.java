@@ -12,12 +12,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStreamWriter;
 import java.util.Scanner;
 
 public class MainActivity extends AppCompatActivity {
@@ -87,14 +84,13 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "DEBE INTRODUCIR UN USUARIO", Toast.LENGTH_SHORT).show();
         }
         if (password.isEmpty()) {
-            Toast.makeText(this, "DEBE INTRODUCIR UN PASSWORD", Toast.LENGTH_SHORT).show();
+           Toast.makeText(this, "DEBE INTRODUCIR UN PASSWORD", Toast.LENGTH_SHORT).show();
         }
 
         try {
             Scanner sc = new Scanner(file);
             while (sc.hasNext()) {
                 String linea = sc.nextLine();
-
 
                 if (usuario.isEmpty()==false && password.isEmpty()==false) {
 
@@ -116,7 +112,6 @@ public class MainActivity extends AppCompatActivity {
                             entrado = true;
                         }
                     }
-
                   }
                 }
                  if (entrado == false && !usuario.isEmpty() && !password.isEmpty()) {
