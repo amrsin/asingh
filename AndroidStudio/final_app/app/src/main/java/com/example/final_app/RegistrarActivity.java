@@ -33,7 +33,7 @@ public class RegistrarActivity extends AppCompatActivity {
     }
 
     public void add_user(View view) {
-
+        String aviso;
         String nom_completo = et1.getText().toString();
         String empresa = et2.getText().toString();
         String puest_trabajo = et3.getText().toString();
@@ -43,23 +43,21 @@ public class RegistrarActivity extends AppCompatActivity {
         String linea_aux = "";
         String cuenta = usuario.trim() + "," + password.trim() + "," + nom_completo.trim() + "," + empresa.trim() + "," + puest_trabajo.trim() + ",";
 
+        if(nom_completo.isEmpty() && empresa.isEmpty() && puest_trabajo.isEmpty() && usuario.isEmpty() && password.isEmpty() && password2.isEmpty() ) {
 
-        if (nom_completo.isEmpty()) {
+            Toast.makeText(this, "DEBE INTRODUCIR UN NOMBRE COMPLETO, EMPRESA, PUESTO TRABAJO," +
+                                               "USUARIO, PASSWORD Y CONFIRMAR PASSWORD", Toast.LENGTH_SHORT).show();
+        }else if(nom_completo.isEmpty()) {
             Toast.makeText(this, "DEBE INTRODUCIR UN NOMBRE COMPLETO", Toast.LENGTH_SHORT).show();
-        }
-        if (empresa.isEmpty()) {
+        }else if(empresa.isEmpty()) {
             Toast.makeText(this, "DEBE INTRODUCIR UNA EMPRESA", Toast.LENGTH_SHORT).show();
-        }
-        if (puest_trabajo.isEmpty()) {
+        }else if (puest_trabajo.isEmpty()) {
             Toast.makeText(this, "DEBE INTRODUCIR UN PUESTO TRABAJO", Toast.LENGTH_SHORT).show();
-        }
-        if (usuario.isEmpty()) {
+        }else if(usuario.isEmpty()) {
             Toast.makeText(this, "DEBE INTRODUCIR UN USUARIO", Toast.LENGTH_SHORT).show();
-        }
-        if (password.isEmpty()) {
+        }else if(password.isEmpty()) {
             Toast.makeText(this, "DEBE INTRODUCIR UN PASSWORD", Toast.LENGTH_SHORT).show();
-        }
-        if (password2.isEmpty()) {
+        }else if(password2.isEmpty()) {
             Toast.makeText(this, "DEBE INTRODUCIR UN CONFIRMAR PASSWORD", Toast.LENGTH_SHORT).show();
         }
 

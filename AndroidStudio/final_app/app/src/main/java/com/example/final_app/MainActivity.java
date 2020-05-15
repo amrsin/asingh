@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText et1, et2;
     boolean entrado = false;
+    private Toast toast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,11 +81,17 @@ public class MainActivity extends AppCompatActivity {
         String password = et2.getText().toString();
         File file = new File(getApplicationContext().getFilesDir() + "info.txt");
 
-        if (usuario.isEmpty()) {
-            Toast.makeText(this, "DEBE INTRODUCIR UN USUARIO", Toast.LENGTH_SHORT).show();
-        }
-        if (password.isEmpty()) {
-           Toast.makeText(this, "DEBE INTRODUCIR UN PASSWORD", Toast.LENGTH_SHORT).show();
+        if (usuario.isEmpty() && password.isEmpty()) {
+            Toast.makeText(this, "DEBE INTRODUCIR UN USUARIO Y PASSWORD", Toast.LENGTH_SHORT).show();
+        }else {
+
+            if(usuario.isEmpty()){
+                Toast.makeText(this, "DEBE INTRODUCIR UN USUARIO", Toast.LENGTH_SHORT).show();
+            }
+
+            if (password.isEmpty()) {
+                Toast.makeText(this, "DEBE INTRODUCIR UN PASSWORD", Toast.LENGTH_SHORT).show();
+            }
         }
 
         try {
