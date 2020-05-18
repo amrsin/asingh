@@ -67,7 +67,7 @@ public class RegistrarActivity extends AppCompatActivity {
             while (sc.hasNext()) {
                 String linea = sc.nextLine();
                 linea_aux = linea_aux + linea + "\n";
-
+                distinto = true;
                 if (!nom_completo.isEmpty() && !empresa.isEmpty() && !puest_trabajo.isEmpty() && !usuario.isEmpty()
                         && !password.isEmpty() && !password2.isEmpty()) {
                     String[] datos = linea.split(",");
